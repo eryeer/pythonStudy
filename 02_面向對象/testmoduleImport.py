@@ -1,0 +1,3 @@
+import testmodule
+
+print("lll")
