@@ -8,3 +8,7 @@ if __name__ == '__main__':
     ecdh2 = privkey2.ecdh(privkey1.public_key.format())
     print(ecdh == ecdh2)
     print(ecdh2)
+    print(len(ecdh2))
+
+    print(ecdh2.hex())
+    print(bytes.fromhex(ecdh2.hex()))
