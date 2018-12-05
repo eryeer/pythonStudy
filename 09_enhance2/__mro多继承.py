@@ -20,6 +20,7 @@ class Son2(Parent):
         print('Son2的init结束被调用')
 
 class Grandson(Son1, Son2):
+
     def __init__(self, name, age, gender):
         print('Grandson的init开始被调用')
         # 多继承时，相对于使用类名.__init__方法，要把每个父类全部写一遍
