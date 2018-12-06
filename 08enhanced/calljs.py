@@ -1,5 +1,4 @@
 import execjs
-from private_ import *
 
 ctx = execjs.compile("""
     function add(x, y) {
