@@ -3,6 +3,7 @@ import re
 import threading
 
 
+
 def service_client(new_socket):
     request = new_socket.recv(1024)
     request_lines = request.decode('utf-8').splitlines()
@@ -37,6 +38,7 @@ def main():
     tcp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     tcp_socket.bind(("", 7890))
     tcp_socket.listen(128)
+    print(tcp_socket.fileno())
     while True:
         new_socket, client_addr = tcp_socket.accept()
         process = threading.Thread(target=service_client, args=(new_socket,))
