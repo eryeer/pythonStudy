@@ -1,0 +1,6 @@
+[sys]
+db_host=172.25.3.128
+db_user=root
+db_pass=123456
+db_port=60036
+db_dump=D://CloudStation//project//pandas//dump//
