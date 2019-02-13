@@ -1,0 +1,11 @@
+,db,exec_count,query
+0,,10,SET `AUTOCOMMIT` = ? 
+1,,6,"SELECT `sys` . `format_stateme ... cy` , `sys` . `format_time` ( "
+2,,6,COMMIT 
+3,,4,SELECT @@`version_comment` LIMIT ? 
+4,,4,SELECT SCHEMA ( ) 
+5,tms,3,SHOW TABLE STATUS LIKE ? 
+6,tms,3,SHOW VARIABLES LIKE ? 
+7,,2,SHOW SCHEMAS 
+8,test,2,SHOW SCHEMAS 
+9,test,2,SHOW TABLES 

@@ -1,0 +1,11 @@
+db,exec_count,query
+,43,SET `AUTOCOMMIT` = ? 
+,38,COMMIT 
+,30,"SELECT `sys` . `format_stateme ... cy` , `sys` . `format_time` ( "
+,12,"SELECT `sys` . `format_path` ( ...  ) ) , ? ) ) AS `avg_write` , "
+,5,SELECT @@`version_comment` LIMIT ? 
+,4,SELECT SCHEMA ( ) 
+tms,3,SHOW TABLE STATUS LIKE ? 
+tms,3,SHOW VARIABLES LIKE ? 
+,3,SELECT IF ( `isnull` ( `perfor ... _host_by_event_name` GROUP BY 
+,3,"SELECT `s` . `ID` AS `ID` , `s ... E` AS `SHIPPER_PHONE` , `s` . "
