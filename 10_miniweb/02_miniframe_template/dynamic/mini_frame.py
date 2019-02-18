@@ -61,7 +61,10 @@ def center():
     conn = connect(host='localhost', port=3306, user='root', password='root', database='stock_db', charset='utf8')
     # 获得Cursor对象
     cs = conn.cursor()
-    cs.execute("select i.code, i.short, i.chg, i.turnover, i.price, i.highs, f.note_info from info as i left join focus as f on f.info_id = i.id;")
+    cs.execute(
+        """
+        select i.code, i.short, i.chg, i.turnover, i.price, i.highs, f.note_info from info as i left join focus as f on f.info_id = i.id;
+        """)
     focus_info = cs.fetchall()
     cs.close()
     conn.close()
