@@ -1,0 +1,6 @@
+2019-02-19 23:31:20,992 - mylogger.py[line:27] - INFO: 访问的是/index.html
+2019-02-19 23:31:28,519 - mylogger.py[line:27] - INFO: 访问的是/center.html
+2019-02-19 23:31:38,620 - mylogger.py[line:27] - INFO: 访问的是/centehhhkkklr.html
+2019-02-19 23:31:38,620 - mylogger.py[line:35] - ERROR: 产生了异常: module 'mylogger' has no attribute 'warn'
+2019-02-19 23:32:04,172 - mylogger.py[line:27] - INFO: 访问的是/centehhhkkklr.html
+2019-02-19 23:32:04,173 - mylogger.py[line:43] - WARNING: 请求的url(/centehhhkkklr.html)没有对应的函数....

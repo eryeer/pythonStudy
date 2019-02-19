@@ -1,7 +1,8 @@
 # _*_ coding:utf-8 _*_
 import re
 from pymysql import *
-
+import urllib.parse
+import mylogger
 URL_FUNC_DICT = dict()
 
 
@@ -125,11 +126,12 @@ def show_update_page(ret):
     return content
 
 
-@route(r"/update/(\d+)/([^.]+)\.html")
+@route(r"/update/(\d+)/(.*)\.html")
 def save_update_page(ret):
     """保存修改的信息"""
     stock_code = ret.group(1)
     comment = ret.group(2)
+    comment = urllib.parse.unquote(comment)
     conn = connect(host='localhost', port=3306, user='root', password='root', database='stock_db', charset='utf8')
     # 获得Cursor对象
     cs = conn.cursor()
@@ -209,12 +211,15 @@ def application(environ, set_response_header):
     #     return center()
     # else:
     #     return '<h1>我爱你中国!</h1>'
+    mylogger.info("访问的是%s" % file_name)
     try:
         for url, func in URL_FUNC_DICT.items():
             ret = re.match(url, file_name)
             if ret:
                 return func(ret)
         else:
+            mylogger.warning("请求的url(%s)没有对应的函数...." % file_name)
             return "请求的url(%s)没有对应的函数...." % file_name
     except Exception as ret:
+        mylogger.error("产生了异常: %s" % str(ret))
         return "产生了异常: %s" % str(ret)
