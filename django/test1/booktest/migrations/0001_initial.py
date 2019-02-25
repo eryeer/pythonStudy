@@ -18,4 +18,15 @@ class Migration(migrations.Migration):
                 ('bpub_date', models.DateField()),
             ],
         ),
+        migrations.CreateModel(
+            name='HeroInfo',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('hname', models.CharField(max_length=20)),
+                ('hgender', models.BooleanField(default=False)),
+                ('hage', models.IntegerField()),
+                ('hcomment', models.CharField(max_length=128)),
+                ('hbook', models.ForeignKey(to='booktest.BookInfo')),
+            ],
+        ),
     ]
