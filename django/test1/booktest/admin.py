@@ -8,9 +8,9 @@ class BookInfoAdmin(admin.ModelAdmin):
 
 
 class HeroInfoAdmin(admin.ModelAdmin):
-    list_display = ['id', 'bname', 'bcomment']
+    list_display = ['id', 'hname', 'hgender','hage','hcomment','hbook']
 
 
 # Register your models here.
 admin.site.register(BookInfo, BookInfoAdmin)
-admin.site.register(HeroInfo)
+admin.site.register(HeroInfo, HeroInfoAdmin)
