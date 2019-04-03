@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./new-encpro2.js"></script>
+</head>
+<body>
+<div class="head">
+    <ol>
+        <li><span>HOME</span></li>
+        <li><span>GITHUB</span></li>
+        <li><span>LINKS</span></li>
+        <li><span>CONTACT ME</span></li>
+    </ol>
+</div>
+</body>
+<script>
+    console.log("通过pbkdf2,以Random1为salt,生成授权秘钥authKey")
+    console.log(this)
+    let t1 = new Date().getTime()
+    console.log(t1)
+    let authKeyAndSalt = window['new-encpro2'].getAuthKeyAndSalt('acount1', '123456');
+    let t2 = new Date().getTime()
+    console.log(t2)
+    console.log(t2-t1)
+    console.log("authKey:", authKeyAndSalt['authKey']);
+
+</script>
+</html>
