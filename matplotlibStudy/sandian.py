@@ -20,9 +20,9 @@ _x = list(x_3) + list(x_10)
 _x_desc = ['3月{}日'.format(i) for i in range(1, 32)]
 _x_desc += ['3月{}日'.format(i) for i in range(1, 32)]
 plt.xticks(_x[::3], _x_desc[::3], rotation=45, fontproperties=my_font)
-plt.legend(prop=my_font,loc='upper left')
-plt.xlabel("月份",fontproperties=my_font)
-plt.ylabel("温度",fontproperties=my_font)
-plt.title("温度月份图",fontproperties=my_font)
+plt.legend(prop=my_font, loc='upper left')
+plt.xlabel("月份", fontproperties=my_font)
+plt.ylabel("温度", fontproperties=my_font)
+plt.title("温度月份图", fontproperties=my_font)
 plt.savefig('./sandian.png')
 plt.show()
